@@ -39,7 +39,7 @@ public class UserController {
 
         // Thjesht kthe tokenin nëse përdoruesi ekziston, pa kontrolluar fjalëkalimin
         if (user != null) {
-            // Gjenero tokenin JWT nëse përdoruesi ekziston
+            // Gjenero tokenin JWT nëse përdoruesi ekziston ose nuk ndryshon
             String token = jwtUtil.generateToken(user);
             return ResponseEntity.ok("Bearer " + token);  // Kthe tokenin JWT në përgjigje
         } else {
